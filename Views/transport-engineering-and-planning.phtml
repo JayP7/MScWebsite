@@ -1,0 +1,229 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/TransportData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Transport Engineering and Planning</li>
+	</ol>  
+    
+             <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Transport Engineering and Planning MSc</h1>    
+
+      
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <div class="fa fa-clock-o fa-2x"></div> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-plane fa-2x"></div> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>  
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Transport Engineering and Planning at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>Member of the national Universities Transport Partnership</li></ul>
+                        <ul><li>Emphasis on methodology and practice, guided by the needs of employers<br></li></ul>
+                        <ul><li>Accredited by the Joint Board of Moderators (Institution of Structural Engineers, Institution of Civil Engineers, Institution of Highways & Transportation) as fully satisfying requirements for Further Learning for a Chartered Engineer (CEng)</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+            <div class="row"> 
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Key Information</b></div>
+                        <div class="panel-body">
+                            <strong>Start Dates: </strong>
+                            September
+                            <br><br>
+                            <strong>Duration: </strong><br><br>
+                            <p>MSc (one year full-time or three years part-time)<br></p>
+                        </div>
+                  </div>
+            </div>
+            
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+                               <?php foreach($view->transportDataSet as $transportData) {
+                                        echo '<p>'. $transportData->getcourse() .'</p>' ;} ?> 
+
+                            </div>
+                      </div>
+                </div> 
+            </div>
+            
+        </div>
+        
+        
+        <div class="tab-pane" id="coursedetails">
+            <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails() .'</p>' ;} ?> 
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transport Planning: Policy and Principles (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails1() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transport Engineering: Principles and Methodologies (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails2() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transport Engineering: Analysis and Road Safety (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails3() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transport Planning: Forecasting and Appraisal (30 credits) (option)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails4() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transport Infrastructure Design and Analysis (30 credits) (option)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails5() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Dissertation (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getcoursedetails6() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getentry() .'</p>' ;} ?>
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+                   <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getteaching() .'</p>' ;} ?>
+        </div>
+        
+        <div class="tab-pane" id="employability">
+              <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getemployability() .'</p>' ;} ?>                   
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            <div class="col-md-6">
+                <?php foreach($view->transportDataSet as $transportData) {
+                   echo '<p>'. $transportData->getfeesandfunding() .'</p>' ;} ?>
+            
+            </div>
+        </div>            
+      
+        </div><!-- tab content -->
+    </div>
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

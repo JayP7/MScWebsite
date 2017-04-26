@@ -1,0 +1,81 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/ApplyingData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Applying</li>
+    </ol>
+    
+        <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <div class="row">
+    <div class="col-md-10">
+        
+                <h1>Applying</h1>
+
+        <?php foreach($view->applyingDataSet as $applyingData) {
+            echo '<p>'. $applyingData->getinfo1() .'</p>' ;} ?>
+        
+        <h1>How to apply for a postgraduate taught degree</h1>
+
+        <?php foreach($view->applyingDataSet as $applyingData) {
+            echo '<p>'. $applyingData->getinfo2() .'</p>' ;} ?>
+    
+    <div class="row">    
+      <div class="col-md-5 col-md-offset-5">
+          <a href="http://webapps.ascentone.com/login.aspx?key=5D4B012A-BB6C-495B-B2E4-B5A56B3CCF00" target="blank" class="btn btn-primary btn-large input-block-level">Apply online</a>
+      </div>
+    </div>
+        
+        <h2>What documents will I need?</h2>
+
+        <?php foreach($view->applyingDataSet as $applyingData) {
+            echo '<p>'. $applyingData->getinfo3() .'</p>' ;} ?>
+
+        <h2>What if my documents aren't ready?</h2>
+
+        <?php foreach($view->applyingDataSet as $applyingData) {
+            echo '<p>'. $applyingData->getinfo4() .'</p>' ;} ?>
+
+        <h2>Deadlines</h2>
+
+        <?php foreach($view->applyingDataSet as $applyingData) {
+            echo '<p>'. $applyingData->getinfo5() .'</p>' ;} ?>
+
+        <h2>Policy statement on equality and diversity</h2>
+
+
+<p><a href="http://www.salford.ac.uk/study/postgraduate/applying/policy-statement-on-equality-and-diversity" target="blank">Read our policy statement on equality and diversity</a>
+    
+    </div>
+    </div>
+
+</div>
+<!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

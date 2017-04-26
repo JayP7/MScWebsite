@@ -1,0 +1,200 @@
+/* navbar */
+.navbar-inverse .navbar-brand img {
+    margin-top: -23px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ff0000;
+}
+
+.navbar-inverse { 
+    border-radius: 0; background:none repeat scroll 0% 0% #FFF; 
+    border-bottom:1px solid rgba(255, 255, 255, 0.15); min-height:100px; padding-top:25px; margin-bottom:0;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > .open ul > a {
+    color:rgba(255, 0, 0, 1);
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #000; background:black ;
+}
+
+.navbar-inverse .navbar-nav > .open > a{ 
+    background:none; color:black;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, 
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover, 
+.navbar-inverse .navbar-nav>.open>a:focus { 
+    background:none; color:black;
+}
+
+.navbar-nav .btn { 
+    border:1px solid rgba(0, 0, 0, .5); margin-left:5px; margin-top:5px; padding-top:10px; padding-bottom:10px; 
+}
+
+.navbar-nav a.btn:focus, .navbar-nav a.btn:hover  { 
+    border:1px solid rgba(0,0,0,.5); 
+}
+
+.navbar-collapse { border:0 none;  border-top:0 none; box-shadow: none; }
+
+.navbar-nav .btn {
+    border: 1px solid rgba(255, 0, 0, 1);
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #F00;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #f00;
+}
+
+/* links */
+a{
+    color: #F00;
+}
+
+a li{
+    color: #F00;
+}
+
+a:active{
+    color: #F00;
+}
+
+a:hover{
+    color: #000;
+}
+
+/* MSc links */
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+    border-color: #F00;
+    color: #F00;
+}
+
+.thumbnail{
+    text-align: center;
+}
+
+.thumbnailcustom {
+    height: 250px;
+}
+
+/* contact text */
+p.contact-text{
+    margin: 0px 6px 10px 3px;
+}
+
+
+.table-responsive{
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+table img{
+    height: 150px;
+    width: 150px;
+}
+
+
+.img-responsive1 {
+    height: 350px;
+}
+
+.padding {
+    margin: 12px 0px 0px 0px;
+}
+
+body.modal-open { 
+    overflow:inherit; padding-right:inherit !important; 
+}
+
+.modal-body{
+    text-align: left;
+}
+
+.modal-body li{
+    margin: 0px 0px 0px 15px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-left-value: 0px;
+    margin-left-ltr-source: physical;
+    margin-left-rtl-source: physical;
+    margin-right: -15px;
+    margin-right-value: -15px;
+    margin-right-ltr-source: physical;
+    margin-right-rtl-source: physical;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 15px;
+}
+
+.panel li {
+    margin-left: 15px;
+}
+
+#head {
+    background: no-repeat scroll 0% 0% / cover transparent;
+    min-height: 350px;
+    max-height: 600px;
+    text-align: center;
+    padding-top: 100px;
+    color: #FFF;
+    font-family: "Open sans",Helvetica,Arial;
+    font-weight: 300;
+}
+
+.btn-search{
+    padding: 7px 30px;
+}
+
+
+label {
+    color: #F00;
+}
+
+hr {
+    border-color: #F00;
+}
+
+
+blockquote {
+    font-style: italic;
+    font-family: Georgia;
+    color: #F00;
+    margin: 30px 0px;
+}
+
+@media (max-width: 767px) {
+	.jumbotron { 
+            margin-top: -150px;
+
+        }
+      
+}
+

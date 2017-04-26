@@ -1,0 +1,222 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/RoboticsAutomationData.php'); ?>
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Robotics and Automation</li>
+	</ol> 
+    
+            <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Robotics and Automation MSc/PgDip</h1>     
+
+      
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+            <li><a href="#facilities" data-toggle="tab">Facilities</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <i class="fa fa-plane fa-2x"></i> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Robotics and Automation at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>Gain a firm grounding in control engineering and intelligent systems concepts</li></ul>
+                        <ul><li>This course has a particular emphasis on advanced robotics, where robots are designed to operate with a degree of intelligence<br></li></ul>
+                        <ul><li>Projects supported by internationally-leading research</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="row">          
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Key Information</b></div>
+                            <div class="panel-body">
+                                <strong>Start Dates: </strong>
+                                September
+                                <br><br>
+                                <strong>Duration: </strong><br><br>
+                                <p>MSc (one year full-time)<br>
+                                   PgDip (nine-months full-time)</p>
+                            </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+                                <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                            echo ''. $roboticsAutomationData->getcourse() .'' ;} ?>
+                            </div>
+                      </div>
+                </div>     
+            </div>
+        </div>
+        
+        
+        <div class="tab-pane" id="coursedetails">
+            <h3>Course Details</h3>
+
+  <h4>Semester 1</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Automation and Robotics (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getcoursedetails1() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Interactive Visualisation (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getcoursedetails2() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+  <h4>Semester 2</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Artificial Intelligence (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getcoursedetails3() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Mobile Robotics (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getcoursedetails4() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Project/ Dissertation (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getcoursedetails5() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+  </div>
+
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getentry() .'' ;} ?>
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+            <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getteaching() .'' ;} ?>
+        </div>
+        
+        <div class="tab-pane" id="employability">
+             <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getemployability() .'' ;} ?>             
+             
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            <div class="col-md-6">
+            <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getfeesandfunding() .'' ;} ?>
+            </div>
+        </div>
+        
+        
+            <div class="tab-pane" id="facilities">
+                <?php foreach($view->roboticsAutomationDataSet as $roboticsAutomationData) {
+                        echo ''. $roboticsAutomationData->getfacilities() .'' ;} ?>
+            </div>
+            
+        
+      
+        </div><!-- tab content -->
+    </div>
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

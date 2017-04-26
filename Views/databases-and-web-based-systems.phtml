@@ -1,0 +1,233 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/DwbsData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+        <header class="secondary"></header>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Database and Web-Based System</li>
+	</ol>	
+
+        <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+     <h1>Databases and Web Based Systems MSc/PgDip</h1>
+    
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+        </ul>
+    
+       <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <div class="fa fa-clock-o fa-2x"></div> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-calendar fa-2x"></div> Alternative start dates available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-plane fa-2x"></div> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Databases and Web-based Systems at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>Get the opportunity to design and implement a web application</li></ul>
+                        <ul><li>Gain hands-on experience of the design and implementation of databases<br></li></ul>
+                        <ul><li>Learn data-mining techniques using popular tools in different application domains</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Key Information</b></div>
+                            <div class="panel-body">
+                                <strong>Start Dates: </strong>
+                                September; January 
+                                <br><br>
+                                <strong>Duration: </strong><br><br>
+                                <strong>MSc</strong> (16 months full time or three years part-time)<br>
+                                <strong>PgDip</strong> (one year full-time or two years part-time)<br>
+                            </div>
+                      </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+                               <?php foreach($view->dwbsDataSet as $dwbsData) {
+                                echo '<p>'. $dwbsData->getcourse() .'</p>' ;} ?>
+                            </div>
+                      </div>
+                </div> 
+            </div>
+        </div>
+          
+        <div class="tab-pane" id="coursedetails">
+            <h3>Course Details</h3>
+
+            <?php foreach($view->dwbsDataSet as $dwbsData) {
+                   echo '<p>'. $dwbsData->getcoursedetails() .'</p>' ;} ?>
+            
+              <h3>Course Structure</h3>
+        <br />
+      
+        <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Advanced Databases (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getcoursedetails1() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Web-based Software Development (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getcoursedetails2() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+       
+        
+
+        <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Semantic Web and Information Extraction (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getcoursedetails3() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Business Intelligence (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getcoursedetails4() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+        <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Project (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getcoursedetails5() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div> 
+                  
+
+  </div>
+        </div>
+       
+        <div class="tab-pane" id="entry">
+             <h3>Entry Requirements</h3>
+
+             <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getentry() .'</p>' ;} ?>      
+        
+        </div>
+       
+          <div class="tab-pane" id="teaching">
+            <h3>Teaching</h3>
+
+            <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getteaching() .'</p>' ;} ?>
+            
+               </div>
+        
+        <div class="tab-pane" id="employability">
+             <h3>Employability</h3>
+
+          <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getemployability() .'</p>' ;} ?>
+             
+        </div>
+        <div class="tab-pane" id="feesandfunding">
+                  <div class="col-md-6">
+            <h3>Fees and Funding</h3>
+   
+      <?php foreach($view->dwbsDataSet as $dwbsData) {
+              echo '<p>'. $dwbsData->getfeesandfunding() .'</p>' ;} ?>
+
+
+
+</div>
+        </div>
+
+      
+        </div><!-- tab content -->
+    </div>
+
+    
+    
+        </div>
+    <!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

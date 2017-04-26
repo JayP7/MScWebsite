@@ -1,0 +1,85 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/HowToGetHereData.php'); ?>
+
+
+<!-- container -->  
+<div class="container"> 
+<br>
+<br>
+<br>
+<br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>
+                <li><a href="mediacity.php">MediaCityUK</a></li>
+		<li class="active">How to get here</li>
+	</ol>		
+    
+    <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="mediacityabout.php">About MediaCityUK</a>
+                            <br><br>
+                            <a href="howtogethere.php">How to get here</a>
+                            <br>
+                            
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+           
+    <div class="row">
+        <div class="col-md-10">
+            
+            <h1>How to get here</h1>
+            
+            <?php foreach($view->howToGetHereDataSet as $howToGetHereData) {
+                 echo '<p>'. $howToGetHereData->getinfo1() .'</p>' ;} ?>
+            
+            <h2>Tram</h2>
+
+            <?php foreach($view->howToGetHereDataSet as $howToGetHereData) {
+                 echo '<p>'. $howToGetHereData->gettram() .'</p>' ;} ?>
+
+            <h2>Bus</h2>
+
+            <?php foreach($view->howToGetHereDataSet as $howToGetHereData) {
+                 echo '<p>'. $howToGetHereData->getbus() .'</p>' ;} ?>
+
+            <h2>Bicycle</h2>
+
+            <?php foreach($view->howToGetHereDataSet as $howToGetHereData) {
+                 echo '<p>'. $howToGetHereData->getbicycle() .'</p>' ;} ?>
+            
+            <h2>Car</h2>
+            
+            <?php foreach($view->howToGetHereDataSet as $howToGetHereData) {
+                 echo '<p>'. $howToGetHereData->getcar() .'</p>' ;} ?>
+            
+            <h2>Flight</h2>
+            
+            <?php foreach($view->howToGetHereDataSet as $howToGetHereData) {
+                 echo '<p>'. $howToGetHereData->getflight() .'</p>' ;} ?>
+
+        <br>
+
+        
+        <div class="row">
+        <div class="col-md-12">
+        <div class="map" id="map_canvas">
+            <iframe class=" img img-responsive img-responsive1" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2374.740090418015!2d-2.2971719999999993!3d53.473105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba9373905dab3%3A0x48284e891e591543!2sMediaCityUK!5e0!3m2!1sen!2suk!4v1419636659143" width="1140" frameborder="0" style="border:0"></iframe>
+        </div>
+        </div>
+    </div>
+        
+        </div>
+    </div>
+</div>
+    <!-- /container -->                        
+
+    
+<?php require('template/footer.phtml') ?>

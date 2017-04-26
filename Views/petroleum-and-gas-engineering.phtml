@@ -1,0 +1,272 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/PetroleumGasData.php'); ?>
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Petroleum and Gas Engineering</li>
+	</ol> 
+    
+            <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Petroleum and Gas Engineering MSc/PgDip</h1>     
+
+      
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <i class="fa fa-clock-o fa-2x"></i> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-calendar fa-2x"></i> Alternative start dates available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-plane fa-2x"></i> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Petroleum and Gas Engineering at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>The first course of its kind in the UK</li></ul>
+                        <ul><li>Enhances your career prospects in the oil and gas industries<br></li></ul>
+                        <ul><li>Gives you the opportunity to become a Chartered Engineer</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Key Information</b></div>
+                            <div class="panel-body">
+                                <strong>Start Dates: </strong>
+                                September
+                                <br><br>
+                                <strong>Duration: </strong><br><br>
+                                <strong>September intake</strong>
+                                <p>MSc (one year full-time or two years part-time)<br>
+                                PgDip (nine months full-time or one year and six months part-time)</p>
+
+                                <strong>January intake</strong>
+
+                                <p>MSc (one year and four months full-time or two years and eight months part-time)<br>
+                                PgDip (one year full-time or two years part-time)</p>
+                            </div>
+                      </div>
+                </div>
+            
+            
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+
+                                <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                            echo ''. $petroleumGasData->getcourse() .'' ;} ?>
+
+                            </div>
+                      </div>
+                </div>
+            </div>
+            
+            
+          <div class="col-md-12">  
+            <div class="panel panel-danger">
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <h3>Watch our video</h3>
+                        <p>International student Kenneth talks about his experiences studying at MSc Petroleum and Gas Engineering.</p>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F4589d44_aw" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>  
+            
+            
+        </div>
+        <div class="tab-pane" id="coursedetails">
+            <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails() .'' ;} ?>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Petroleum Economics and Project Management (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails1() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Geology, Exploration, Drilling and Production (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails2() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Fundamentals of Natural Gas and Production Systems and Design (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails3() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Distribution, Transmission Systems and Design (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails4() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Gas Flow and Network Analysis (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails5() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+  
+  <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Experimental and Measurement Methods (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails6() .'' ;} ?>
+    </div>
+      </div>
+    </div>  
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Project/Dissertation (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getcoursedetails7() .'' ;} ?>
+    </div>
+      </div>
+    </div>  
+  </div>
+  
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getentry() .'' ;} ?>
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+            <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getteaching() .'' ;} ?>
+
+
+        </div>
+        
+        <div class="tab-pane" id="employability">
+            <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getemployability() .'' ;} ?>              
+             <br><br><br><br>
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            <div class="col-md-6">
+            <?php foreach($view->petroleumGasDataSet as $petroleumGasData) {
+                        echo ''. $petroleumGasData->getfeesandfunding() .'' ;} ?>
+            </div>
+        </div>       
+        
+      
+        </div><!-- tab content -->
+    </div>
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

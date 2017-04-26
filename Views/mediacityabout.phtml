@@ -1,0 +1,77 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/MediaCityAboutData.php'); ?>
+
+<!-- container -->  
+<div class="container secondary">
+<br>
+<br>
+<br>
+<br>
+
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>
+                <li><a href="mediacity.php">MediaCityUK</a></li>
+		<li class="active">About MediaCityUK</li>
+	</ol>		
+           
+    <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="mediacityabout.php">About MediaCityUK</a>
+                            <br><br>
+                            <a href="howtogethere.php">How to get here</a>
+                            <br>
+                            
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+   
+    
+    <div class="row">
+        <div class="col-md-10"> 
+        
+       <h1>About MediaCityUK</h1>  
+        
+        <h2>Where science and creativity collide</h2>
+
+        <?php foreach($view->mediaCityAboutDataSet as $mediaCityAboutData) {
+                 echo '<p>'. $mediaCityAboutData->getinfo1() .'</p>' ;} ?>
+        
+        <h2>A clear advantage for students</h2>
+
+        <?php foreach($view->mediaCityAboutDataSet as $mediaCityAboutData) {
+                 echo '<p>'. $mediaCityAboutData->getinfo2() .'</p>' ;} ?>
+
+        <h2>Real support for businesses</h2>
+
+        <?php foreach($view->mediaCityAboutDataSet as $mediaCityAboutData) {
+                 echo '<p>'. $mediaCityAboutData->getinfo3() .'</p>' ;} ?>
+        
+        <h2>A place for innovative research</h2>
+
+        <?php foreach($view->mediaCityAboutDataSet as $mediaCityAboutData) {
+                 echo '<p>'. $mediaCityAboutData->getinfo4() .'</p>' ;} ?>
+
+        <h2>A flexible, original venue</h2>
+
+        <?php foreach($view->mediaCityAboutDataSet as $mediaCityAboutData) {
+                 echo '<p>'. $mediaCityAboutData->getinfo5() .'</p>' ;} ?>
+        
+        <h2>About MediaCityUK</h2>
+
+        
+        <?php foreach($view->mediaCityAboutDataSet as $mediaCityAboutData) {
+                 echo '<p>'. $mediaCityAboutData->getinfo6() .'</p>' ;} ?>
+
+        </div>
+    </div>
+
+</div>
+<!-- /container -->
+
+<?php require('template/footer.phtml') ?>

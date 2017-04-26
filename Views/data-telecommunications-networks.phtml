@@ -1,0 +1,236 @@
+<?php require('template/header.phtml');
+
+require_once('Models/NetworksData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Data Telecommunications Networks</li>
+	</ol> 
+            
+    <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Data Telecommunications Networks MSc/PgDip</h1>    
+
+      
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+            <li><a href="#facilities" data-toggle="tab">Facilities</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            
+             <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <div class="fa fa-clock-o fa-2x"></div> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-calendar fa-2x"></div> Alternative start dates available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-plane fa-2x"></div> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+        
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Data Telecommunications Networks at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>Great employment prospects in a large and growing industry for  good graduates</li></ul>
+                        <ul><li>Your will be based at MediaCityUK<br></li></ul>
+                        <ul><li>The teaching and topics of this course are closely aligned to a top research centre at the University</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Key Information</b></div>
+                        <div class="panel-body">
+                            <strong>Start Dates: </strong>
+                            September; January
+                            <br><br>
+                            <strong>Duration: </strong><br><br>
+                            <strong>September intake</strong>
+
+                            <p>MSc (one year full-time or two years part-time)<br>
+                            PgDip (nine months full-time or one year and six months part-time)</p>
+
+                            <p><strong>January intake</strong></p>
+
+                            <p>MSc (one year and four months full-time or two years and eight months distance learning / part-time)<br>
+                            PgDip (one year full-time or two years distance learning / part-time)</p>
+                            
+                        </div>
+                  </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Course Summary</b></div>
+                        <div class="panel-body">
+                            <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcourse() .'</p>' ;} ?>                            
+                        </div>
+                  </div>
+            </div>     
+            </div>
+        </div>
+        <div class="tab-pane" id="coursedetails">
+            
+            <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcoursedetails() .'</p>' ;} ?> 
+            
+            
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Network Technologies, Architecture and Design (30 Credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcoursedetails1() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Research Methods and Project Management (30 Credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcoursedetails2() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Network Programming and Simulation (30 Credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcoursedetails3() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Wireless and Mobile Technologies (30 Credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcoursedetails4() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+  
+      </div>
+
+  
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Project (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->networksDataSet as $networksData) {
+                            echo '<p>'. $networksData->getcoursedetails5() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             <?php foreach($view->networksDataSet as $networksData) {
+                   echo '<p>'. $networksData->getentry() .'</p>' ;} ?>
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+            <?php foreach($view->networksDataSet as $networksData) {
+                   echo '<p>'. $networksData->getteaching() .'</p>' ;} ?>
+            
+        </div>
+        
+        <div class="tab-pane" id="employability">
+             <?php foreach($view->networksDataSet as $networksData) {
+                   echo '<p>'. $networksData->getemployability() .'</p>' ;} ?>            
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            <div class="col-md-6">
+                <?php foreach($view->networksDataSet as $networksData) {
+                   echo '<p>'. $networksData->getfeesandfunding() .'</p>' ;} ?>
+            </div>
+        </div>
+        
+        
+            <div class="tab-pane" id="facilities">
+             <?php foreach($view->networksDataSet as $networksData) {
+                   echo '<p>'. $networksData->getfacilities() .'</p>' ;} ?>
+                    <br><br><br><br><br><br><br><br>
+        </div>
+            
+        
+      
+        </div><!-- tab content -->
+    </div>
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

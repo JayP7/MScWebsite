@@ -1,0 +1,141 @@
+<?php
+require('template/header.phtml');
+
+require_once('Models/InternationalData.php');
+?>
+
+<div>
+    <!-- Header -->
+    <header id="head">
+        <img src="images/International.png" class ="img img-responsive">
+    </header>
+    <!-- /Header -->
+</div>  
+
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a href="index.php">Home</a></li>	
+        <li class="active">International</li>
+    </ol> 
+
+    <div class="col-md-12">
+
+        <h1>International</h1>
+
+        <div class="col-md-4">
+            <img src="images/inter1.jpg" alt="">
+            <br><br>
+            <img src="images/inter2.jpg" alt=""> 
+            <br><br>
+            <img src="images/inter3.jpg" alt=""> 
+        </div>
+
+        <div class="col-md-8">
+
+            <h4><b>Studying in the UK</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getstudy() . '</p>';
+            }
+            ?>
+
+            <h4><b>International scholarships</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getscholarship() . '</p>';
+            }
+            ?>
+
+            <h4><b>Our Students</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getourstudents() . '</p>';
+            }
+            ?>
+
+            <h4><b>Meeting Us</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getmeeting() . '</p>';
+            }
+            ?>
+
+            <h4><b>How to apply</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getapply() . '</p>';
+            }
+            ?>
+
+            <h4><b>FAQ's</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getfaq() . '</p>';
+            }
+            ?>
+
+            <h4><b>Getting ready for Salford</b></h4>
+            <?php
+            foreach ($view->internationalDataSet as $internationalData) {
+                echo '<p>' . $internationalData->getgettingready() . '</p>';
+            }
+            ?>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Here are some of what you can expect: <a href="http://www.salford.ac.uk/getready" target="blank" style="color: red;">Getting Ready</a></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <li>Accommodation</li>
+                        </div>
+                        <div class="col-md-6">
+                            <li>IT Services</li>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <li>Local shops & services</li>
+                        </div>
+                        <div class="col-md-6">
+                            <li>Registration</li>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <li>Inductions</li>
+                        </div>
+                        <div class="col-md-6">
+                            <li>Getting Around</li>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <li>Financial support</li>
+                        </div>
+                        <div class="col-md-6">
+                            <li>International support</li>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+        </div> 
+
+        <div class="col-md-12">
+            <hr>
+            <div class="col-md-4 col-md-offset-4 text-center"> 
+
+                <h4>For more information click below</h4>
+                <a class="btn btn-danger mybutton" href="http://www.salford.ac.uk/international" target="blank" role="button">Salford International</a></p>
+            </div>
+        </div>   
+    </div>  
+
+
+</div><!-- /container -->
+
+
+
+<?php require('template/footer.phtml') ?>

@@ -1,0 +1,203 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/AboutData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+            <li><a href="index.php">Home</a></li>	
+            <li class="active">About</li>
+        </ol>
+    
+    <div class="col-md-12">
+        
+        <?php foreach($view->aboutDataSet as $aboutData) {
+              echo '<p>'. $aboutData->getaboutinfo() .'</p>' ;} ?>
+        
+        <?php foreach($view->aboutDataSet as $aboutData) {
+              echo '<p>'. $aboutData->getlifeinfo() .'</p>' ;} ?>
+        
+        
+        
+ <div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail img-responsive">
+      <img src="images/location.jpg" alt="Our Location">
+      <br>
+        <a href="#myModal" role="button" class="btn btn-info img-responsive btn-block" data-toggle="modal">Our Location</a>        
+          <div class="modal fade" id="myModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Our Location</h4>
+                      </div>
+                      <div class="modal-body">
+                          <?php foreach($view->aboutDataSet as $aboutData) {
+                            echo '<p>'. $aboutData->getlocation() .'</p>' ;} ?>
+                          <h4 class="text-center">For more information</h4>
+                          <div class="text-center"><a href="http://www.salford.ac.uk/study/life-at-salford/our-location" target="blank" class="btn btn-info">Our Location</a></div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+     
+    <div class="col-md-4">
+    <div class="thumbnail img-responsive">
+      <img src="images/campus.jpg" alt="Campus and Facilities">
+      <br>
+        <a href="#myModal1" role="button" class="btn btn-info img-responsive btn-block" data-toggle="modal">Campus and Facilities</a>        
+          <div class="modal fade" id="myModal1">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Campus and Facilities</h4>
+                      </div>
+                      <div class="modal-body">
+                          <?php foreach($view->aboutDataSet as $aboutData) {
+                            echo '<p>'. $aboutData->getcampus() .'</p>' ;} ?>
+                          <h4 class="text-center">For more information</h4>
+                            <div class="text-center"><a href="http://www.salford.ac.uk/study/life-at-salford/campus-and-facilities" target="blank" class="btn btn-info">Campus and Facilities</a></div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+  
+     
+     <div class="col-md-4">
+    <div class="thumbnail img-responsive">
+      <img src="images/accommodation.jpg" alt="Accommodation">
+      <br>
+        <a href="#myModal2" role="button" class="btn btn-info img-responsive btn-block" data-toggle="modal">Accommodation</a>        
+          <div class="modal fade" id="myModal2">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Accommodation</h4>
+                      </div>
+                      <div class="modal-body">
+                          <?php foreach($view->aboutDataSet as $aboutData) {
+                            echo '<p>'. $aboutData->getaccommodation() .'</p>' ;} ?>
+                          <h4 class="text-center">For more information</h4>
+                            <div class="text-center"><a href="http://www.salford.ac.uk/study/life-at-salford/accommodation" target="blank" class="btn btn-info">Accommodation</a></div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+
+</div> <!--/row-->    
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail img-responsive">
+      <img src="images/leisure.jpg" alt="Leisure and Entertainment">
+      <br>
+        <a href="#myModal4" role="button" class="btn btn-info img-responsive btn-block" data-toggle="modal">Leisure and Entertainment</a>        
+          <div class="modal fade" id="myModal4">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Leisure and Entertainment</h4>
+                      </div>
+                      <div class="modal-body">
+                          <?php foreach($view->aboutDataSet as $aboutData) {
+                            echo '<p>'. $aboutData->getleisure() .'</p>' ;} ?>
+                            <h4 class="text-center">For more information</h4>
+                            <div class="text-center"><a href="http://www.salford.ac.uk/study/life-at-salford/leisure-and-entertainment" target="blank" class="btn btn-info">Leisure and Entertainment</a></div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+     
+    <div class="col-md-4">
+    <div class="thumbnail img-responsive">
+      <img src="images/sports.jpg" alt="Sports and Activities">
+      <br>
+        <a href="#myModal5" role="button" class="btn btn-info img-responsive btn-block" data-toggle="modal">Sports and Activities</a>        
+          <div class="modal fade" id="myModal5">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Sports and Activities</h4>
+                      </div>
+                      <div class="modal-body">
+                          <?php foreach($view->aboutDataSet as $aboutData) {
+                            echo '<p>'. $aboutData->getsports() .'</p>' ;} ?>
+                            <h4 class="text-center">For more information</h4>
+                          <div class="text-center"><a href="http://www.salford.ac.uk/study/life-at-salford/campus-sports-and-activities" target="blank" class="btn btn-info">Sports and Activities</a>
+                          <a href="http://www.salfordstudents.com/gsag" target="blank" class="btn btn-info">Student Activities</a></div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+     
+     <div class="col-md-4">
+    <div class="thumbnail img-responsive">
+      <img src="images/support.jpg" alt="Student Support">
+      <br>
+        <a href="#myModal6" role="button" class="btn btn-info img-responsive btn-block" data-toggle="modal">Student Support</a>        
+          <div class="modal fade" id="myModal6">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Student Support</h4>
+                      </div>
+                      <div class="modal-body">
+                          <?php foreach($view->aboutDataSet as $aboutData) {
+                            echo '<p>'. $aboutData->getsupport() .'</p>' ;} ?>
+                            <h4 class="text-center">For more information</h4>
+                            <div class="text-center"><a href="http://www.salford.ac.uk/study/life-at-salford/student-support" target="blank" class="btn btn-info">Student Support</a></div>
+                      </div>
+                      <div class="modal-footer">
+                          <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+     
+        </div> <!--/row-->  
+   
+    </div><!-- /col -->   
+
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

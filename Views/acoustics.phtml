@@ -1,0 +1,312 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/AcousticsData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Acoustics</li>
+	</ol> 
+
+            <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Acoustics MSc/PgDip</h1>   
+  
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+            <li><a href="#facilities" data-toggle="tab">Facilities</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <div class="fa fa-clock-o fa-2x"></div> Part time study available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-home fa-2x"></div> Distance learning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-briefcase fa-2x"></div> Overseas study available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-plane fa-2x"></div> International students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+            <div class="col-md-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <h3 class="panel-title">3 good reasons to study Acoustics at Salford:</h3>
+                </div>
+                <div class="panel-body">
+                    <ul><li>You are taught by World-class audio and acoustic engineering and audio researchers with international links and impact</li></ul>
+                    <ul><li>An in-depth analytical treatment of acoustic engineering as used in industry and research<br></li></ul>
+                    <ul><li>Strong and long-standing connections with industrial partners across Europe which inform course content, drive postgraduate recruitment, and create collaborative MSc summer project opportunities.</li></ul>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            
+            <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Key Information</b></div>
+                        <div class="panel-body">
+                            <strong>Start Dates: </strong>
+                            September
+                            <br><br>
+                            <strong>Duration: </strong><br><br>
+                            <strong>MSc</strong> (one year full-time or 32 months part-time or distance learning)<br>
+                            <strong>PgDip</strong> (nine months full-time or 20 months part-time)
+                        </div>
+                  </div>
+            </div>
+            
+            
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Course Summary</b></div>
+                        <div class="panel-body">
+                            <?php foreach($view->acousticsDataSet as $acousticsData) {
+                            echo ''. $acousticsData->getcourse() .'' ;} ?>
+                            
+                         </div>
+                  </div>
+            </div>     
+        </div>
+        </div>
+              
+
+
+<div class="tab-pane" id="coursedetails">
+            
+     <?php foreach($view->acousticsDataSet as $acousticsData) {
+                            echo ''. $acousticsData->getnewcourse() .'' ;} ?>
+
+  <h4>Semester 1 (for the full-time option)</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Principles of Acoustics and Vibration (15 credits, year 1 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails1() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Measurement, Analysis and Assessment (15 credits, year 1 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails2() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+   <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Loudspeaker and Microphones (15 credits, year 2 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails3() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Digital Signal Processing )15 credits, year 2 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails4() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+
+  <h4>Semester 2</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Room Acoustics (15 credits, year 1 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails5() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Computer Simulation of Acoustics (15 credits, year 1 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails6() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+   <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Psychoacoustics (15 credits. year 2 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails7() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Transducer Design (15 credits, year 2 part-time)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails8() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+  <h4>Semester 3</h4>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Project</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getcoursedetails9() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+  
+  </div>
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getentry() .'</p>' ;} ?>
+
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+                <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getteaching() .'</p>' ;} ?>
+        </div>
+        
+        <div class="tab-pane" id="employability">
+             
+            <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getemployability() .'</p>' ;} ?>
+
+                          
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            
+                
+                
+                <?php foreach($view->acousticsDataSet as $acousticsData) {
+               echo '<p>'. $acousticsData->getfeesandfunding() .'</p>' ;} ?>
+                  
+
+            </div>
+        
+        
+            <div class="tab-pane" id="facilities">
+             
+
+              <?php foreach($view->acousticsDataSet as $acousticsData) {
+                            echo '<p>'. $acousticsData->getfacilities() .'</p>' ;} ?>
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-danger">
+                            <div class="panel-body">
+                                <img src="images/chamber.jpg" alt="Sound Chamber">
+                            </div>
+                        </div>  
+                    </div>            
+                </div>
+                
+            </div>
+            
+        
+      
+        </div><!-- tab content -->
+    </div>
+
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

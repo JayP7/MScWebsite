@@ -1,0 +1,334 @@
+<?php require('template/header.phtml');
+
+require_once('Models/AdvancedControlSystemsData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Advanced Control Systems</li>
+	</ol> 
+    
+            <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Advanced Control Systems MSc/PgDip</h1>     
+
+      
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+            <li><a href="#facilities" data-toggle="tab">Facilities</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <div class="fa fa-clock-o fa-2x"></div> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-plane fa-2x"></div> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">3 good reasons to study Advanced Control Systems at Salford:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul><li>Emphasis on feedback control, robotics, flight control and discrete event manufacturing control</li></ul>
+                            <ul><li>Real opportunities for career progression in to the automation industry<br></li></ul>
+                            <ul><li>Programme designed using Engineering Council benchmarks</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Key Information</b></div>
+                            <div class="panel-body">
+                                <strong>Start Dates: </strong>
+                                September
+                                <br><br>
+                                <strong>Duration: </strong><br><br>
+                                <strong>MSc</strong> (one year full-time or two years part-time)<br>
+                                <strong>PgDip</strong> (nine months full-time)
+                            </div>
+                      </div>
+                </div>
+            
+                
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+                                <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                                echo '<p>'. $advancedControlSystemsData->getcourse() .'</p>' ;} ?>
+                            </div>
+                      </div>
+                </div>     
+            </div>
+        </div>
+        <div class="tab-pane" id="coursedetails">
+            <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails() .'</p>' ;} ?>
+
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Automation and Robotics (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails1() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Instrumentation and Control (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails2() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Instrumentation and Control (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails3() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Project and Dissertation (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails4() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Flight Dynamics and Control (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails5() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Artificial Intelligence (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+      <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails6() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+<h2>Part-time route</h2>
+
+    <h3>Year 1, Semester 1</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Automation and Robotics</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails7() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Instrumentation and Control</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails8() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+  
+<h3>Year 2</h3>
+
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Artificial Intelligence</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails9() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Flight Dynamics and Control</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails10() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+  
+      </div>
+
+<div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Mobile Robotics</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails11() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+    <h3>Year 3</h3>
+    
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Project and Dissertation</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getcoursedetails12() .'</p>' ;} ?>
+    </div>
+      </div>
+    </div>
+  
+  </div>
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             
+        <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getentry() .'</p>' ;} ?>
+
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+            <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getteaching() .'</p>' ;} ?>
+        </div>
+        
+        <div class="tab-pane" id="employability">
+                 
+             <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getemployability() .'</p>' ;} ?>
+             
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            
+            <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getfeesandfunding() .'</p>' ;} ?>
+
+            </div>
+        
+        
+            <div class="tab-pane" id="facilities">
+             
+                <?php foreach($view->advancedControlSystemsDataSet as $advancedControlSystemsData) {
+                   echo '<p>'. $advancedControlSystemsData->getfacilities() .'</p>' ;} ?>
+
+        </div>
+            
+        
+      
+        </div><!-- tab content -->
+    </div>
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

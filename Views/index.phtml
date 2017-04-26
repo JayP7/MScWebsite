@@ -1,0 +1,77 @@
+<?php require('template/header.phtml');
+
+require_once('Models/IndexData.php'); ?>
+
+     <div>
+         <!-- Header -->
+            <header id="head">
+                <img src="images/newbanner.jpg" alt="UOS" class ="img img-responsive">
+            </header>
+        <!-- /Header -->
+    
+    
+    <div class="jumbotron text-center">
+            <h2>Welcome to School of Computing, Science & Engineering</h2>
+            <h2 class="thin">A great place to study in the heart of Manchester</h2><br>
+            <p><a href="msccourses.php" class="btn btn-success btn-lg">View our MSc Courses</a></p>
+        </div>
+    </div>
+       
+    <br>
+    <!-- container -->
+    <div class="container">
+        <div class="col-md-8 pull-left">
+        
+            <div class="panel panel-default">
+                
+                <div class="panel-body">
+                    
+                            <?php foreach($view->indexDataSet as $indexData) {
+                            echo '<p>'. $indexData->getindex1() .'</p>' ;} ?>
+                    
+                 </div>  
+            </div>
+        
+                 <h2>Leading edge facilities, accredited courses and international research<br></h2>
+            
+                    
+                            <?php foreach($view->indexDataSet as $indexData) {
+                            echo '<p>'. $indexData->getindex2() .'</p>' ;} ?>
+       
+
+        <h2>Internationalisation</h2>
+
+        
+          <?php foreach($view->indexDataSet as $indexData) {
+                            echo '<p>'. $indexData->getindex3() .'</p>' ;} ?>
+        
+         </div>
+        
+        <div class="col-md-4 pull-right">
+            <div class="panel panel-info">
+                <div class="panel-heading heading-color">
+                    <div class="panel-title">Open Days</div>
+                </div>
+                <div class="panel-body">                
+                    <?php foreach($view->indexDataSet as $indexData) {
+                            echo '<p>'. $indexData->getindex4() .'</p>' ;} ?>
+               </div>
+            </div>
+        </div>
+        
+       <br>
+      <!--
+       <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NVGD6LkduYk" allowfullscreen></iframe>
+            </div>
+        </div>
+       </div>
+     -->  
+       
+    </div>
+    <!-- /container -->
+
+
+<?php require('template/footer.phtml') ?>

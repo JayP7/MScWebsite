@@ -1,0 +1,142 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/PrivacypolicyData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+		<li class="active">Privacy Policy</li>
+	</ol>		
+
+    <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="sitemap.php">Site Map</a>
+                            <br><br>
+                            <a href="accessibility.php">Accessibility</a>
+                            <br><br>
+                            <a href="privacypolicy.php">Privacy Policy</a>
+                            <br><br>
+                            <a href="foi.php">FOI Request</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    
+    <div class="row">  
+        <div class="col-md-10">
+
+            <h1>Privacy Policy</h1>
+
+            <h2>Privacy statement for the University of Salford website</h2>
+
+            <h2>Our commitment to privacy</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getprivacyinfo() .'</p>' ;} ?>
+
+        <h2>Who is collecting the information?</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getinformation() .'</p>' ;} ?>
+
+        <h2>What information do we collect?</h2>
+
+        <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getcollect() .'</p>' ;} ?>
+
+            <h3>Permission-based collection of information:</h3>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getpermission() .'</p>' ;} ?>
+
+            <h3>How do we use the information we collect?<br></h3>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getinformationcollect() .'</p>' ;} ?>
+            
+            <h2>Access and correction of personal information</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getpersonalinformation1() .'</p>' ;} ?>
+
+            <h3>How to access and correct personal information</h3>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getpersonalinformation2() .'</p>' ;} ?>
+
+            <h2>Our use of cookies</h2>
+            
+             <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getcookies() .'</p>' ;} ?>
+
+            <h2>Registration for access</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getregistration() .'</p>' ;} ?>
+
+            <h2>Interactive services and tools</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getinteractive() .'</p>' ;} ?>
+
+            <h2>Security of communications</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getsecurity() .'</p>' ;} ?>
+
+            <h2>E-Commerce, online donations, and online shopping</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getecommerce() .'</p>' ;} ?>
+
+            <h2>International Enquiries</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getinternational() .'</p>' ;} ?>
+
+            <h2>Advertising servers</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getadvertising() .'</p>' ;} ?>
+
+            <h2>Links to other sites</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getlinks() .'</p>' ;} ?>
+
+            <h2>Changes in our privacy statement</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getprivacystatement() .'</p>' ;} ?>
+
+            <h2>Preference for future use of information</h2>
+
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getfutureinformation() .'</p>' ;} ?>
+
+            <h2>Website contact information</h2>
+            
+            <?php foreach($view->privacypolicyDataSet as $privacypolicyData) {
+                 echo '<p>'. $privacypolicyData->getcontact() .'</p>' ;} ?>
+           
+        </div>
+    </div>
+    
+    
+
+</div>
+<!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

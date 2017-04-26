@@ -1,0 +1,102 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/MediaCityData.php'); ?>
+
+<!-- container -->  
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+   <!-- Carousel -->
+        <div id="myCarousel" class="carousel slide" date-interval="3000" data-ride="carousel">
+  
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="images/banner1.jpg" class="img-responsive">
+            </div>
+            <div class="item">
+              <img src="images/banner2.jpg" class="img-responsive">   
+            </div>
+            <div class="item">
+               <img src="images/banner3.jpg" class="img-responsive">         
+            </div>
+          </div>
+
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+          </a>  
+        </div>
+        <!-- Carousel End -->   
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+		<li class="active">MediaCityUK</li>
+	</ol>		
+        
+    <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="mediacityabout.php">About MediaCityUK</a>
+                            <br><br>
+                            <a href="howtogethere.php">How to get here</a>
+                            <br>
+                            
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+   
+   
+   <div class="row">
+    <div class="col-md-10">
+        
+        <h1>MediaCityUK</h1> 
+            
+        <?php foreach($view->mediaCityDataSet as $mediaCityData) {
+                 echo '<p>'. $mediaCityData->getinfo1() .'</p>' ;} ?>
+        
+        
+        
+        <h1>Why study at the University of Salford, MediaCityUK</h1>
+
+        
+        <?php foreach($view->mediaCityDataSet as $mediaCityData) {
+                 echo '<p>'. $mediaCityData->getinfo2() .'</p>' ;} ?>
+        
+
+        <h2>On-site student support</h2>
+
+
+        <?php foreach($view->mediaCityDataSet as $mediaCityData) {
+                 echo '<p>'. $mediaCityData->getinfo3() .'</p>' ;} ?>
+
+
+        <h2>Amenities</h2>
+    
+       <?php foreach($view->mediaCityDataSet as $mediaCityData) {
+                 echo '<p>'. $mediaCityData->getinfo4() .'</p>' ;} ?>
+
+
+        
+        </div>
+   </div>
+
+       
+</div>
+<!-- /container -->
+
+<?php require('template/footer.phtml') ?>

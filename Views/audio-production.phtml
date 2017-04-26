@@ -1,0 +1,301 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/AudioProductionData.php'); ?>
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Audio Production</li>
+	</ol> 
+            
+    <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Audio Production MSc/PgDip</h1>       
+  
+  
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+            <li><a href="#facilities" data-toggle="tab">Facilities</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <div class="fa fa-clock-o fa-2x"></div> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-video-camera fa-2x"></div> Based at MediaCityUK &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="fa fa-plane fa-2x"></div> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Audio Production at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>Study at our state-of-the-art MediaCityUK campus</li></ul>
+                        <ul><li>Enjoy excellent job prospects in a growing field<br></li></ul>
+                        <ul><li>Tap into the expertise of world-class audio-engineering and acoustics researchers</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+            
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Key Information</b></div>
+                        <div class="panel-body">
+                            <strong>Start Dates: </strong>
+                            September; January
+                            <br><br>
+                            <strong>Duration: </strong><br><br>
+                            <p>September start<br>
+                        <strong>MSc</strong> (one year full-time or up to three years part-time)<br>
+                        <strong>PgDip</strong> (nine months full-time or 18 months part-time)<br><br>
+                        January start<br>
+                        <strong>MSc</strong> (16 months full-time)<br>
+                        <strong>PgDip</strong> (one year full-time or up to two years part-time)</p>
+
+                        </div>
+                  </div>
+            </div>
+        
+            
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Course Summary</b></div>
+                        <div class="panel-body">
+                         <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcourse() .'' ;} ?> 
+                        </div>
+                  </div>
+            </div>
+            </div>
+            
+        </div>
+        <div class="tab-pane" id="coursedetails">
+            
+            <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails() .'' ;} ?> 
+            
+<p>For the full-time study option:<br></p>
+          
+
+  <h4>Semester 1</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Audio Production (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails1() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Audio Post Production (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+         <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails2() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+      </div>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Emerging Technologies and Digital Culture (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails3() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Audio Theory (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+         <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails4() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  <h4>Semester 2</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Spatial Audio (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails5() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Recording Studio Design (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails6() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+      </div>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sound Synthesis (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails7() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Research Methods (15 credits)</h3>
+    </div>
+    <div class="panel-body">
+         <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails8() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+      </div>
+  
+  
+  
+  <h4>Semester 3</h4>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Project (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+         <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getcoursedetails9() .'' ;} ?> 
+    </div>
+      </div>
+    </div>
+  </div>
+
+    <p>If the course is studied on a part-time basis, only one module per semester is undertaken.</p>
+  
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+            <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getentry() .'' ;} ?> 
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+            <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getteaching() .'' ;} ?> 
+        
+        </div>
+        
+        <div class="tab-pane" id="employability">
+             <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getemployability() .'' ;} ?> 
+             
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            
+            <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getfeesandfunding() .'' ;} ?> 
+
+            </div>
+        
+        
+            <div class="tab-pane" id="facilities">
+              <?php foreach($view->audioProductionDataSet as $audioProductionData) {
+                     echo ''. $audioProductionData->getfacilities() .'' ;} ?>      
+                
+        </div>
+            
+        
+      
+        </div><!-- tab content -->
+    </div>    
+
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

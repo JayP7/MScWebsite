@@ -1,0 +1,218 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/StructuralEngineeringData.php'); ?>
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Structural Engineering</li>
+	</ol>  
+    
+            <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <h1>Structural Engineering MSc/PgDip/PgCert</h1>     
+
+      
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+        </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <i class="fa fa-clock-o fa-2x"></i> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-plane fa-2x"></i> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Structural Engineering at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>The emphasis is on current methodology and practice</li></ul>
+                        <ul><li>You will be well equipped to meet the challenges of the modern structural engineering industry<br></li></ul>
+                        <ul><li>Accredited by the Joint Board of Moderators (Institution of Structural Engineers, Institution of Civil Engineers, Institution of Highways & Transportation) as fully satisfying requirements for Further Learning for a Chartered Engineer (CEng)</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Key Information</b></div>
+                            <div class="panel-body">
+                                <strong>Start Dates: </strong>
+                                September
+                                <br><br>
+                                <strong>Duration: </strong><br><br>
+                                <strong>MSc</strong> (one year full time or three years part-time)
+                            </div>
+                      </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+                                <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+                                echo ''. $structuralEngineeringData->getcourse() .'' ;} ?>
+
+                            </div>
+                      </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="tab-pane" id="coursedetails">
+            <h3>Course Details</h3>
+
+  <h4>Semester 1</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Introduction to Design with Computer Applications (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getcoursedetails1() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Seismic Engineering and Practical Applications of Finite Element Analysis (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getcoursedetails2() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+  <h4>Semester 2</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Further Design with Applications to Building Structures (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getcoursedetails3() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Bridge Engineering (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getcoursedetails4() .'' ;} ?>
+    </div>
+      </div>
+    </div>
+      </div>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">MSc Dissertation (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getcoursedetails5() .'' ;} ?>
+    </div>
+      </div>
+    </div>  
+  </div>
+
+        </div>
+        
+        
+        <div class="tab-pane" id="entry">
+             <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getentry() .'' ;} ?>
+
+        </div>
+      
+        
+        <div class="tab-pane" id="teaching">
+            <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getteaching() .'' ;} ?> 
+            <br><br><br><br><br><br>
+        </div>
+        
+        <div class="tab-pane" id="employability">
+                <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getemployability() .'' ;} ?>         
+             
+        </div>
+        
+        <div class="tab-pane" id="feesandfunding">
+            <div class="col-md-6">
+            <?php foreach($view->structuralEngineeringDataSet as $structuralEngineeringData) {
+               echo ''. $structuralEngineeringData->getfeesandfunding() .'' ;} ?>
+            </div>
+        </div>
+        
+ 
+            
+        
+      
+        </div><!-- tab content -->
+    </div>
+    
+</div><!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

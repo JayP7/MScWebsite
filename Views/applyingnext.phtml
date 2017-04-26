@@ -1,0 +1,69 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/ApplyingNextData.php'); ?>
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Applying</li>
+    </ol>
+    
+        <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    <div class="row">
+    <div class="col-md-10">
+        
+        <h1>Applied - what happens next</h1>
+
+        <?php foreach($view->applyingNextDataSet as $applyingNextData) {
+            echo '<p>'. $applyingNextData->getinfo1() .'</p>' ;} ?>
+        
+            <h3>Responding to your offer</h3>
+
+            <?php foreach($view->applyingNextDataSet as $applyingNextData) {
+            echo '<p>'. $applyingNextData->getinfo2() .'</p>' ;} ?>
+
+            <h3>Sorting out your fees</h3>
+
+            <?php foreach($view->applyingNextDataSet as $applyingNextData) {
+            echo '<p>'. $applyingNextData->getinfo3() .'</p>' ;} ?>
+            
+            <h3>Applying for accommodation</h3>
+
+            <?php foreach($view->applyingNextDataSet as $applyingNextData) {
+            echo '<p>'. $applyingNextData->getinfo4() .'</p>' ;} ?>
+            
+            <h3>Meet the conditions of your offer</h3>
+
+            <?php foreach($view->applyingNextDataSet as $applyingNextData) {
+            echo '<p>'. $applyingNextData->getinfo5() .'</p>' ;} ?>
+
+    </div>
+    </div>
+
+</div>
+<!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

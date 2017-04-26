@@ -1,0 +1,76 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/TaughtDegreesData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Taught Degrees</li>
+    </ol>
+    
+        <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+    
+    
+    <div class="row">
+        <div class="col-md-10">
+            <h1>Postgraduate taught degrees<br></h1>
+
+    <h2>Accelerate your career</h2>
+
+    <?php foreach($view->taughtDegreesDataSet as $taughtDegreesData) {
+            echo '<p>'. $taughtDegreesData->getinfo1() .'</p>' ;} ?> 
+    
+    
+    <h2>Increase your earning potential</h2>
+
+    <?php foreach($view->taughtDegreesDataSet as $taughtDegreesData) {
+            echo '<p>'. $taughtDegreesData->getinfo2() .'</p>' ;} ?> 
+    
+    
+    <h2>Gain practical experience</h2>
+
+    <?php foreach($view->taughtDegreesDataSet as $taughtDegreesData) {
+            echo '<p>'. $taughtDegreesData->getinfo3() .'</p>' ;} ?> 
+    
+    <h2>Scholarships and bursaries</h2>
+
+    <?php foreach($view->taughtDegreesDataSet as $taughtDegreesData) {
+            echo '<p>'. $taughtDegreesData->getinfo4() .'</p>' ;} ?> 
+    
+    
+    <h2>Flexible study</h2>
+
+    <?php foreach($view->taughtDegreesDataSet as $taughtDegreesData) {
+            echo '<p>'. $taughtDegreesData->getinfo5() .'</p>' ;} ?> 
+    
+    
+        </div>
+    </div>
+
+</div>
+<!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>

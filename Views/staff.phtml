@@ -1,0 +1,77 @@
+<?php require('template/header.phtml');
+
+require_once('Models/StaffData.php'); ?>
+
+<!-- container -->  
+ <div class="container secondary">
+<br>
+<br>
+<br>
+<br>
+   
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+		<li class="active">Staff</li>
+	</ol>		
+                           
+<h1>Staff</h1>   
+
+
+    <div class="col-md-offset-4">
+        <div class="input-group col-md-4">
+            <form class="form-horizontal" method="post">
+              <span class="input-group-btn">
+                  <input type="text" class="form-control" name="fullname" placeholder="Search">
+              
+              <button class="btn btn-danger btn-search" type="submit">
+              <span class="fa fa-search"></span>
+             </button>
+             </span>
+            </form>
+             </div><!-- /input-group -->
+    </div>
+        
+
+
+<br>
+
+
+<div class="col-md-12">
+ <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+     <div class="table-responsive table-bordered">
+<table class="table table-striped datatable">
+    
+
+ <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Staff Names</th>
+      <th>Teaching & Courses</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+    <?php foreach($view->staffDataSet as $staffData) {
+    echo'<tr> <td>'. '<td>'.
+            
+            '<img src="images/'. $staffData->getphoto() .'"alt="no picture"' . 
+            ' />'. 
+            '</td> <td>'. $staffData->getfull_name() .
+            '</td> <td>'. $staffData->getcourse() .
+            '</td> <td>'. $staffData->getemail() .
+           '<br>'. $staffData->gettelephone() .
+            
+            '</td> </td> </tr>';} ?>
+
+</table> 
+</div>
+            <div>
+                <br><br><br><br><br><br><br><br></br>
+                </div>    
+    
+</div>  
+
+</div>
+    <!-- /container -->    
+    
+<?php require('template/footer.phtml') ?>

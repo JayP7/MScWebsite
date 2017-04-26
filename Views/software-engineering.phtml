@@ -1,0 +1,273 @@
+<?php require('template/header.phtml') ;
+
+require_once('Models/SeData.php'); ?>
+
+<!-- container -->  
+<div class="container"> 
+        <header class="secondary"></header>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+	<ol class="breadcrumb">
+		<li><a href="index.php">Home</a></li>	
+                <li><a href="msccourses.php">MSc Courses</a></li>
+		<li class="active">Software Engineering</li>
+	</ol>
+
+         <!-- Sidebar -->
+		
+        <aside class="col-md-2 sidebar sidebar-left">
+            
+		<div class="row widget">
+			<div class="col-xs-12">
+                            <a href="taughtdegrees.php">Taught Degrees</a>
+                            <br><br>
+                            <a href="applying.php">Applying</a>
+                            <br><br>
+                            <a href="applyingnext.php">Applying Next</a>
+			</div>
+		</div>
+	</aside>
+    <!-- /Sidebar -->
+
+    <h1>Software Engineering MSc/PgDip</h1>
+    
+    <div class="col-md-10">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+            <li><a href="#coursedetails" data-toggle="tab">Course Details</a></li>
+            <li><a href="#entry" data-toggle="tab">Entry Requirements</a></li>
+            <li><a href="#teaching" data-toggle="tab">Teaching</a></li>
+            <li><a href="#employability" data-toggle="tab">Employability</a></li>
+            <li><a href="#feesandfunding" data-toggle="tab">Fees and Funding</a></li>
+        </ul>
+    
+      <div class="tab-content">
+        <div class="tab-pane active" id="overview">
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="panel-body text-center">
+                            <i class="fa fa-clock-o fa-2x"></i> Part Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-map-marker fa-2x"></i> Work placement opportunity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-plane fa-2x"></i> International Students can apply &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">3 good reasons to study Software Engineering at Salford:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul><li>School has a strong tradition in software engineering and programming</li></ul>
+                        <ul><li>Taught by highly rated research staff<br></li></ul>
+                        <ul><li>One-year work-placement opportunities.</li></ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Key Information</b></div>
+                            <div class="panel-body">
+                                <strong>Start Dates: </strong>
+                                September
+                                <br><br>
+                                <strong>Duration: </strong><br><br>
+                                MSc (one year full-time, three years part-time or two years full-time with Professional Placement)<br>
+                                PGDip (two semesters full-time or two years part-time)<br>
+                            </div>
+                      </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>Course Summary</b></div>
+                            <div class="panel-body">
+                               <?php foreach($view->seDataSet as $seData) {
+                       echo '<p>'. $seData->getcourse() .'</p>' ;} ?>
+                            </div>
+                      </div>
+                </div>     
+            </div>
+        </div>
+          
+        <div class="tab-pane" id="coursedetails">
+            <h3>Course Details</h3>
+     
+     <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails() .'</p>' ;} ?>     
+ 
+    <h3>Semester 1</h3>
+ 
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Advanced Programming (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails1() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Systems Engineering (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails2() .'</p>' ;} ?> 
+    </div>
+      </div>
+    </div>
+  
+      </div>
+
+
+    <h3>Semester 2</h3>
+
+
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Research Methods, Development and Project (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails3() .'</p>' ;} ?>  
+    </div>
+      </div>
+    </div>
+
+
+     <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Software Architecture and Application Security (30 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails4() .'</p>' ;} ?>  
+    </div>
+      </div>
+    </div>
+  
+      </div>
+
+
+    <h3>Semester 3</h3>
+ 
+<div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Project for MSc (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails5() .'</p>' ;} ?>  
+    </div>
+      </div>
+    </div>
+</div>
+
+    <p><strong>Or</strong></p>
+
+    <h4>Year two</h4>
+ 
+
+<div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Professional Placement (60 credits)</h3>
+    </div>
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails6() .'</p>' ;} ?>  
+    </div>
+      </div>
+    </div>
+</div>
+
+
+    <h2>Part-time Study</h2>
+
+    <div class="row">
+    <div class="col-md-12">
+    <div class="panel panel-default">
+    <div class="panel-body">
+        <?php foreach($view->seDataSet as $seData) {
+            echo '<p>'. $seData->getcoursedetails7() .'</p>' ;} ?>  
+    </div>
+      </div>
+    </div>
+</div>
+    
+  
+        
+        </div>
+        
+        <div class="tab-pane" id="entry">
+             <h3>Entry Requirements</h3>
+
+          <?php foreach($view->seDataSet as $seData) {
+                   echo '<p>'. $seData->getentry() .'</p>' ;} ?>
+             
+        </div>
+       
+          <div class="tab-pane" id="teaching">
+            <h3>Teaching</h3>
+
+            <?php foreach($view->seDataSet as $seData) {
+                   echo '<p>'. $seData->getteaching() .'</p>' ;} ?>             
+            
+               </div>
+        
+        <div class="tab-pane" id="employability">
+             <h3>Employability</h3>
+
+         <?php foreach($view->seDataSet as $seData) {
+                   echo '<p>'. $seData->getemployability() .'</p>' ;} ?>
+             
+        </div>
+          
+        <div class="tab-pane" id="feesandfunding">
+                        <div class="col-md-6">
+            <h3>Fees and Funding</h3>
+            
+            <?php foreach($view->seDataSet as $seData) {
+                   echo '<p>'. $seData->getfeesandfunding() .'</p>' ;} ?>
+      
+                        </div>
+        </div>
+      
+      
+        </div><!-- tab content -->
+    </div>
+
+    
+        </div>
+    <!-- /container -->                        
+                        
+
+<?php require('template/footer.phtml') ?>
